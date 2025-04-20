@@ -1,0 +1,261 @@
+/* Core Theme */
+:root {
+  --primary-color: #4f46e5;
+  --secondary-color: #6366f1;
+  --background-light: #f9fafb;
+  --background-dark: #1f2937;
+  --text-light: #111827;
+  --text-dark: #f3f4f6;
+  --border-radius: 10px;
+  --modal-overlay-bg: rgba(0, 0, 0, 0.6);
+}
+
+/* Light & Dark Themes */
+.lightMode {
+  background-color: var(--background-light);
+  color: var(--text-light);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.darkMode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.roomHeaderControls {
+  display: flex;
+  gap: 10px;
+}
+
+.editButton,
+.removeButton,
+.scheduleButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.removeButton {
+  background-color: #dc2626;
+}
+
+.editButton:hover,
+.removeButton:hover,
+.scheduleButton:hover {
+  opacity: 0.9;
+}
+
+/* Room Buttons */
+.roomSwitchButtons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.roomSwitchButtons button {
+  background-color: #e5e7eb;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.roomSwitchButtons button:hover {
+  background-color: #d1d5db;
+}
+
+.activeRoom {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+/* Devices Grid */
+.devicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Device Card */
+.deviceCard {
+  background-color: #ffffff10;
+  backdrop-filter: blur(10px);
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.deviceInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.deviceImage {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.deviceImageStyle {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.deviceName {
+  flex: 1;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.threeDots {
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.deviceStatus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* Add Buttons */
+.addButton {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.2rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #4338ca;
+}
+
+.cancelButton {
+  background-color: #6b7280;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancelButton:hover {
+  background-color: #4b5563;
+}
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-overlay-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  color: black;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.inputName,
+.inputImage {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: var(--border-radius);
+}
+
+/* Controls */
+.controls {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.turnOffAll {
+  background-color: #ef4444;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.turnOffAll:hover {
+  background-color: #b91c1c;
+}
+
+.deviceStatusText {
+  font-size: 1.1rem;
+  font-weight: 500;
+}

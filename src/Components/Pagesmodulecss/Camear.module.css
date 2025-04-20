@@ -1,0 +1,411 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f7fafc;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.dark {
+  background: #1a202c;
+  color: #e2e8f0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.dark .title h1 {
+  color: #e2e8f0;
+}
+
+.title p {
+  font-size: 1rem;
+  color: #718096;
+}
+
+.dark .title p {
+  color: #a0aec0;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.addButton,
+.recordButton {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addButton {
+  background: #3182ce;
+  color: #ffffff;
+}
+
+.addButton:hover {
+  background: #2b6cb0;
+}
+
+.recordButton {
+  background: #e53e3e;
+  color: #ffffff;
+}
+
+.recordButton:hover {
+  background: #c53030;
+}
+
+.dark .addButton {
+  background: #63b3ed;
+}
+
+.dark .addButton:hover {
+  background: #4299e1;
+}
+
+.dark .recordButton {
+  background: #f56565;
+}
+
+.dark .recordButton:hover {
+  background: #e53e3e;
+}
+
+/* Main Content */
+.mainContent {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Camera Feed */
+.cameraFeed {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark .cameraFeed {
+  background: #2d3748;
+}
+
+.feedImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.noCamera {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #718096;
+}
+
+.dark .noCamera {
+  color: #a0aec0;
+}
+
+.feedInfo h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.dark .feedInfo h2 {
+  color: #e2e8f0;
+}
+
+.feedAddress {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-bottom: 1rem;
+}
+
+.dark .feedAddress {
+  color: #a0aec0;
+}
+
+.feedControls {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.controlButton {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: #edf2f7;
+  color: #2d3748;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controlButton:hover {
+  background: #e2e8f0;
+}
+
+.dark .controlButton {
+  background: #4a5568;
+  color: #e2e8f0;
+}
+
+.dark .controlButton:hover {
+  background: #718096;
+}
+
+/* Camera List */
+.cameraList {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark .cameraList {
+  background: #2d3748;
+}
+
+.cameraList h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.dark .cameraList h3 {
+  color: #e2e8f0;
+}
+
+.cameraItem {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cameraItem:hover {
+  background: #edf2f7;
+}
+
+.dark .cameraItem:hover {
+  background: #4a5568;
+}
+
+.selected {
+  background: #e3f2fd;
+}
+
+.dark .selected {
+  background: #2b6cb0;
+}
+
+.cameraThumbnail {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 1rem;
+}
+
+.cameraInfo {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cameraInfo span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.dark .cameraInfo span {
+  color: #e2e8f0;
+}
+
+.cameraActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.actionButton:first-child {
+  background: #3182ce;
+  color: #ffffff;
+}
+
+.actionButton:first-child:hover {
+  background: #2b6cb0;
+}
+
+.actionButton:last-child {
+  background: #e53e3e;
+  color: #ffffff;
+}
+
+.actionButton:last-child:hover {
+  background: #c53030;
+}
+
+.dark .actionButton:first-child {
+  background: #63b3ed;
+}
+
+.dark .actionButton:first-child:hover {
+  background: #4299e1;
+}
+
+.dark .actionButton:last-child {
+  background: #f56565;
+}
+
+.dark .actionButton:last-child:hover {
+  background: #e53e3e;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dark .modalContent {
+  background: #2d3748;
+}
+
+.modalContent h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+.dark .modalContent h2 {
+  color: #e2e8f0;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2d3748;
+}
+
+.dark .input {
+  border-color: #4a5568;
+  background: #4a5568;
+  color: #e2e8f0;
+}
+
+.modalButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.modalButton {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modalButton:first-child {
+  background: #3182ce;
+  color: #ffffff;
+}
+
+.modalButton:first-child:hover {
+  background: #2b6cb0;
+}
+
+.modalButton:last-child {
+  background: #edf2f7;
+  color: #2d3748;
+}
+
+.modalButton:last-child:hover {
+  background: #e2e8f0;
+}
+
+.dark .modalButton:first-child {
+  background: #63b3ed;
+}
+
+.dark .modalButton:first-child:hover {
+  background: #4299e1;
+}
+
+.dark .modalButton:last-child {
+  background: #4a5568;
+  color: #e2e8f0;
+}
+
+.dark .modalButton:last-child:hover {
+  background: #718096;
+}

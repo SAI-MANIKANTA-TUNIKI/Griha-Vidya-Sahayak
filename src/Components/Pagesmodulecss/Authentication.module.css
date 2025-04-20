@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --lightBlue: #17a;
+  --lightGray: #f5f7fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+  position: absolute;
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  min-height: 450px;
+  background: linear-gradient(135deg, var(--white), var(--lightGray));
+  border: 2px solid var(--black);
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.form-box {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 25px 40px;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  position: absolute;
+  top: 0;
+}
+
+.form-box.login {
+  left: 0;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.form-box.register {
+  right: 0;
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.active .form-box.login {
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.active .form-box.register {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.title {
+  font-size: clamp(24px, 5vw, 32px);
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 25px;
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(to right, var(--black), var(--lightBlue));
+  border-radius: 2px;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 20px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--black);
+  padding: 10px 35px 10px 10px;
+  transition: all 0.3s ease;
+  border-radius: 4px 4px 0 0;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+  border-bottom-color: var(--lightBlue);
+  box-shadow: 0 2px 8px rgba(0, 0, 170, 0.2);
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: var(--black);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+  font-size: 12px;
+  color: var(--lightBlue);
+  background: var(--white);
+  padding: 0 5px;
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: var(--black);
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus ~ i,
+.input-box input:valid ~ i {
+  color: var(--lightBlue);
+}
+
+.btn {
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(90deg, var(--black), #333);
+  color: var(--white);
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, var(--lightBlue), #005);
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 170, 0.3);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.linkTxt {
+  font-size: 14px;
+  color: var(--black);
+  text-align: center;
+  margin: 20px 0;
+}
+
+.linkTxt a {
+  color: var(--lightBlue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.linkTxt a:hover {
+  text-decoration: underline;
+  color: #005;
+}
+
+.info-text {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px 40px;
+  background: linear-gradient(135deg, var(--black), var(--lightBlue));
+  color: var(--white);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.info-text.login {
+  right: 0;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.info-text.register {
+  left: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.active .info-text.login {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.active .info-text.register {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.info-text h2 {
+  font-size: clamp(28px, 5vw, 36px);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.info-text p {
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 700px;
+    min-height: 400px;
+  }
+
+  .form-box {
+    padding: 20px 30px;
+  }
+
+  .info-text {
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 500px;
+    min-height: 500px;
+    background: linear-gradient(135deg, var(--white), #e8ecef);
+  }
+
+  .form-box {
+    width: 100%;
+    padding: 25px;
+    position: relative;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+
+  .form-box.login,
+  .form-box.register {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .active .form-box.login {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .active .form-box.register {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .info-text {
+    display: none;
+  }
+
+  .title {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+
+  .input-box {
+    margin: 18px 0;
+    height: 48px;
+  }
+
+  .input-box input {
+    font-size: 15px;
+    padding: 8px 35px 8px 10px;
+  }
+
+  .input-box label {
+    font-size: 15px;
+  }
+
+  .input-box i {
+    font-size: 20px;
+  }
+
+  .btn {
+    height: 45px;
+    font-size: 15px;
+  }
+
+  .linkTxt {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    max-width: 400px;
+    min-height: 450px;
+  }
+
+  .form-box {
+    padding: 20px;
+  }
+
+  .input-box input {
+    font-size: 14px;
+  }
+
+  .input-box label {
+    font-size: 14px;
+  }
+
+  .input-box i {
+    font-size: 18px;
+  }
+
+  .btn {
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .linkTxt {
+    font-size: 12px;
+    margin: 15px 0;
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "smart-gruham-webapp",
+  "homepage": "https://SAI-MANIKANTA-TUNIKI.github.io/Griha-Vidya-Sahayak",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "host": "vite --host",
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "axios": "^1.8.4",
+    "boxicons": "^2.1.4",
+    "chart.js": "^4.4.8",
+    "classnames": "^2.5.1",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^12.6.3",
+    "react": "^19.1.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-color": "^2.19.3",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.5.0",
+    "react-transition-group": "^4.4.5",
+    "recharts": "^2.15.3",
+    "styled-components": "^6.1.17"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@types/chart.js": "^2.9.41",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.0",
+    "@types/react-color": "^3.0.13",
+    "@types/react-dom": "^19.1.1",
+    "@types/recharts": "^1.8.29",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.24.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.0.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.1",
+    "vite": "^6.2.5"
+  }
+}

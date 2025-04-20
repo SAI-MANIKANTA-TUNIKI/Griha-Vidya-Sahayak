@@ -1,0 +1,38 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  
+  .sidebarList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-text {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .profileSection {
+    padding: 20px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .profileButton {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .profileImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  

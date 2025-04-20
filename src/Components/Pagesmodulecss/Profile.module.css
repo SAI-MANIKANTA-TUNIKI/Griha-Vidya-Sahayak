@@ -1,0 +1,231 @@
+/* General styling */
+.profileContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode support */
+.profileContainer.dark {
+  background-color: #181818;
+  color: #f5f5f5;
+}
+
+/* Profile content container */
+.profileContent {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Background image */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+/* Profile picture container */
+.profilePicContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* Profile picture */
+.profilePic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on profile picture */
+.profilePicContainer:hover .profilePic {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;          
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* File input for profile picture */
+.fileInput {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Edit button styling */
+.editButton {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Edit button hover effect */
+.editButton:hover {
+  background-color: #0056b3;
+}
+
+/* Section styles */
+.section {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+}
+
+/* Dark mode section */
+.profileContainer.dark .section {
+  background-color: #2c2c2c;
+}
+
+/* Headings in sections */
+h2, h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Text paragraphs */
+p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+ 
+  transition: color 0.3s ease;
+}
+
+/* Input fields and textareas for editing */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focused state for inputs and textareas */
+input:focus, textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+  background-color: #e6f0ff;
+}
+
+/* Nickname styling */
+.nickname {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #00ffdd;
+  font-style: italic;
+}
+
+/* Social media links */
+a {
+  color: #007BFF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on social media links */
+a:hover {
+  color: #0056b3;
+}
+
+/* Delete account button styling */
+.deleteButton {
+  background-color: #DC3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+/* Delete account button hover effect */
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design: For smaller screens */
+@media (max-width: 768px) {
+  .profileContent {
+    padding: 15px;
+  }
+
+  .profilePic {
+    width: 120px;
+    height: 120px;
+  }
+
+  h2, h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .editButton, .deleteButton {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profilePic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .section {
+    padding: 8px;
+  }
+
+  .profilePicContainer {
+    margin-bottom: 10px;
+  }
+
+  .fileInput {
+    width: 100%;
+    padding: 12px;
+  }
+}
